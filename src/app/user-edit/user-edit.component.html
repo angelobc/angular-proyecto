@@ -1,0 +1,70 @@
+<h3>Edit user</h3>
+  <form novalidate #f="ngForm" (ngSubmit)="onUpdate(f)">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" name="name" #name="ngModel"
+      [class.is-danger]="name.touched && name.invalid"
+      [(ngModel)]="user.name" required>
+      <p class="help is-danger" *ngIf="name.touched && name.invalid">
+            El nombre es requerido.
+      </p>
+    </div>
+
+    <div class="form-group">
+      <label for="lastname">Last Name</label>
+      <input type="text" class="form-control"  name="lastname"  #lastname="ngModel"
+      [class.is-danger]="lastname.touched && lastname.invalid"
+      [(ngModel)]="user.lastname">
+      <p class="help is-danger" *ngIf="lastname.touched && lastname.invalid">
+            El apellido es requerido.
+      </p>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" class="form-control" name="email" #email="ngModel"
+      [class.is-danger]="email.touched && email.invalid"
+      [(ngModel)]="user.email">
+      <p class="help is-danger" *ngIf="email.touched && email.invalid">
+            El email es requerido.
+    </p>
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Phone</label>
+        <input class="form-control" name="phone" maxlength="7" #phone="ngModel"
+        [class.is-danger]="phone.touched && phone.invalid"
+        [(ngModel)]="user.phone"/>
+        <p class="help is-danger" *ngIf="phone.touched && phone.invalid">
+                El telefono es requerido. Debe contener maximo 7 numeros
+        </p>
+    </div>
+
+    <div class="form-group">
+        <label for="age">Age</label>
+        <input class="form-control" name="age" minlength="1" #age="ngModel"
+        [class.is-danger]="age.touched && age.invalid"
+        [(ngModel)]="user.age"/>
+        <p class="help is-danger" *ngIf="age.touched && age.invalid">
+                El telefono es requerido. Debe contener al menos 1 numero
+        </p>
+    </div>
+
+    <div class="form-group">
+        <label for="role">Role</label>
+        <input class="form-control" id="role" name="role" #role="ngModel"
+        [class.is-danger]="role.touched && role.invalid"
+        [(ngModel)]="user.role"/>
+        <p class="help is-danger" *ngIf="role.touched && role.invalid">
+                El role es requerido.
+        </p>
+    </div>
+
+    <div class=" field has-text-centered ">
+        <p class="help is-danger" *ngIf="error">{{ error }}</p>
+    </div>
+
+    <input type="hidden" id="id" name="id" [(ngModel)]="user.id" required>
+    <button class="btn btn-dark" (click)="goBack()">Go back</button>
+    <button type="submit" class="btn btn-success" [disabled]="f.invalid">Submit</button>
+  </form>

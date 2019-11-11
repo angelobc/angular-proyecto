@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "id": 101,
+      "name": "Manuel",
+      "lastname": "Garcia",
+      "email": "manuel.garcia@gmail.com",
+      "phone": 1234567,
+      "age": 28,
+      "role": "Analista"
+    },
+    {
+      "id": 102,
+      "name": "Juan",
+      "lastname": "Buendia",
+      "email": "juan.buendia@gmail.com",
+      "phone": 1234567,
+      "age": 20,
+      "role": "Programador"
+    },
+    {
+      "id": 103,
+      "name": "Maria",
+      "lastname": "Flores",
+      "email": "maria.flores@gmail.com",
+      "phone": 1234567,
+      "age": 25,
+      "role": "Contadora"
+    },
+    {
+      "name": "Arturo",
+      "lastname": "Rojas",
+      "email": "arturo.rojas@gmail.com",
+      "phone": "1234567",
+      "age": "28",
+      "role": "Manager",
+      "id": 104
+    },
+    {
+      "name": "Ignacio",
+      "lastname": "Perez",
+      "email": "ignacio.perez@gmail.com",
+      "phone": "1234567",
+      "age": "20",
+      "role": "Help Test",
+      "id": 105
+    },
+    {
+      "name": "Paty",
+      "lastname": "Tenorio",
+      "email": "paty.tenorio@gmail.com",
+      "phone": "1234567",
+      "age": "28",
+      "role": "Secretaria",
+      "id": 106
+    }
+  ]
+}
